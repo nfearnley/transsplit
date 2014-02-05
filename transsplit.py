@@ -22,8 +22,8 @@ def transsplit(img, layer):
     pdb.gimp_image_undo_group_end(img)
 
 def splitlayer(img, layer, color, name):
-    pdb.gimp_context_set_foreground(WHITE)
-    pdb.gimp_context_set_background(BLACK)
+    pdb.gimp_context_set_foreground(BLACK)
+    pdb.gimp_context_set_background(WHITE)
     new_layer = pdb.gimp_layer_copy(layer, False)
     pdb.gimp_image_insert_layer(img, new_layer, None, -1)
     pdb.gimp_item_set_name(new_layer, name)
